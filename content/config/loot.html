@@ -1,0 +1,52 @@
+<h2>loot.json explained</h2>
+<section>
+    <small>Copying from here does not work! as the comma's behind will not be copied with it.</small>
+    <div class="expl-surround">
+        <pre>
+            [
+                {
+                    "name": "lootchest",
+                    "items": {
+                        "20": "rO0ABXNyABpvcmcu...",
+                        "38": "rO0ABXNyABpvcmcu...",
+                        "14": "rO0ABXNyABpvcmcu..."
+                    },
+                    "commands": [
+                      "msg %player% hey",
+                      "say %faction% won",
+                      "say Whoop whoop!"
+                    ]
+                },
+                {
+                    "name": "otherloot",
+                    "items": {
+                    }
+                }
+            ]
+        </pre>
+        <div class="explanation">
+            <br/><br/>
+            The name of the loot chest
+            <br/><br/>
+            The number between quotes is the slot number.<br/>
+            The items are in Base64 (kind of unreadable)<br/>
+            don't worry about trying to understand them ;)
+            <br /><br />
+            The list of commands that will be executed<br />
+            The %player% is replaced is executed for EVERY player<br />
+            The %faction% is replaced for the faction<br />
+            A keyword isn't required :)
+            <br/><br/>
+            <br/><br/>
+            The name of the loot chest<br/>
+            An empty loot list<br/><br/>
+            <br/><br/>
+        </div>
+        <br class="clear"/></div>
+</section>
+<link rel="stylesheet" href="/KoTH/css/jjsonviewer.css">
+<script type="text/javascript" src="/KoTH/js/jquery.min.js"></script>
+<script type="text/javascript" src="/KoTH/js/jjsonviewer.js"></script>
+<script type="text/javascript">  $("pre").each(function () {
+    $(this).jJsonViewer($(this).html().replace(/&amp;/gi, "&"), {expanded: true});
+});</script>

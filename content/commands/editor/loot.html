@@ -1,0 +1,64 @@
+<h2>Loot commands</h2>
+<header>
+    <p>
+        For these commands you need the permission: <b>koth.admin.loot</b>
+    </p>
+    <h5>The loot commands are:</h5>
+    <p>
+    <ul>
+        <li><a href="#create">create</a></li>
+        <li><a href="#edit">edit</a></li>
+        <li><a href="#remove">remove</a></li>
+        <li><a href="#rename">rename</a></li>
+        <li><a href="#list">list</a></li>
+        <li><a href="#asmember">asmember</a></li>
+        <li><a href="#commands">commands</a></li>
+    </ul>
+</header>
+<section>
+    <h3 id="create">/koth loot create <abbr title="required">&lt;loot&gt;</abbr></h3>
+    <p>This will create a new editable, linkable loot chest with the given name.</p>
+</section>
+<section>
+    <h3 id="edit">/koth loot edit <abbr title="required">&lt;loot&gt;</abbr></h3>
+    <p>This will open the loot chest that you can edit.</p>
+</section>
+<section>
+    <h3 id="remove">/koth loot remove <abbr title="required">&lt;loot&gt;</abbr></h3>
+    <p>Removes the loot chest.</p>
+</section>
+<section>
+    <h3 id="rename">/koth loot rename <abbr title="required">&lt;loot&gt;</abbr> <abbr title="required">&lt;newname&gt;</abbr></h3>
+    <p> Renames the loot chest. </p>
+</section>
+<section>
+    <h3 id="list">/koth loot list</h3>
+    <p> Shows a list of all created loot chests. </p>
+</section>
+<section>
+    <h3 id="asmember">/koth loot asmember [...args]</h3>
+    <p>Members see the /koth loot differently as an Administrator, Now to make sure you know what members actually see you can use this command.</p>
+</section>
+<section>
+    <h3 id="commands">/koth loot cmd <abbr title="required">&lt;loot&gt;</abbr></h3>
+    <p>Loot commands is a great way to give players a reward that can only be given through commands</p>
+    <p class="warning">
+        <b>WARNING!</b>
+        <span>
+            KoTH is executing commands with NO limitations.<br />
+            For safety, at least make sure that only OP's can access this command
+        </span>
+    </p>
+    <section>
+        <h4>/koth loot cmd <abbr title="required">&lt;loot&gt;</abbr> add <abbr title="required">&lt;command&gt;</abbr></h4>
+        <p>Add a command to the loot commands list</p>
+    </section>
+    <section>
+        <h4>/koth loot cmd <abbr title="required">&lt;loot&gt;</abbr> list</h4>
+        <p>List all commands with their ID in the loot commands list</p>
+    </section>
+    <section>
+        <h4>/koth loot cmd <abbr title="required">&lt;loot&gt;</abbr> remove <abbr title="required">&lt;id&gt;</abbr></h4>
+        <p>Remove a specific command in the list with the given #ID</p>
+    </section>
+</section>

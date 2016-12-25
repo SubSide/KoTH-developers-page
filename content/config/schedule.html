@@ -1,0 +1,61 @@
+<h2>Schedule.json explained</h2>
+<section>
+    <small>Copying from here does not work! as the comma's behind will not be copied with it.</small>
+    <div class="expl-surround">
+        <pre>
+            {
+                "Monday": [
+                    {
+                        "lootChest": "test",
+                        "captureTime": 15,
+                        "maxRunTime": 30,
+                        "koth": "pyramid",
+                        "time": "5:00AM",
+                        "lootAmount": 7
+                    },
+                    {
+                        "captureTime": 15,
+                        "koth": "pyramid",
+                        "time": "7:00AM"
+                    }
+                ],
+                "Tuesday": [
+                    {
+                        "captureTime": 15,
+                        "koth": "pyramid",
+                        "time": "7:00AM"
+                    }
+                ]
+            }
+        </pre>
+        <div class="explanation">
+            <br/>
+            Day<br/><br/>
+            Loot chest that it should use<br/>
+            Capture time of the KoTH<br/>
+            Maximum time it can run<br/>
+            The KoTH that should run<br/>
+            Which time it should start.<br/>
+            The amount of loot it should use.<br/>
+            <br/><br/>
+            Capture time of the KoTH<br/>
+            The KoTH that should run<br/>
+            Which time it should start.<br/>
+            <br/><br/>
+            Day
+            <br/><br/>
+            Capture time of the KoTH<br/>
+            The KoTH that should run<br/>
+            Which time it should start.<br/>
+            <br/>
+            <br/><br/>
+        </div>
+        <br class="clear"/></div>
+</section>
+</section>
+<link rel="stylesheet" href="/KoTH/css/jjsonviewer.css">
+<script type="text/javascript" src="/KoTH/js/jquery.min.js"></script>
+<script type="text/javascript" src="/KoTH/js/jjsonviewer.js"></script>
+<script type="text/javascript">  $("pre").each(function () {
+    $(this).jJsonViewer($(this).html().replace(/&amp;/gi, "&"), {expanded: true});
+});</script>

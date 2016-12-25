@@ -48,16 +48,18 @@ main {
 
 main p {
     max-width: 700px;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 main section {
     font-weight: 400;
 }
 
+main section:last-child {
+    margin-bottom: 60px;
+}
+
 main a {
-    color: #0000AA;
+    color: #000077;
     text-decoration: none;
     font-weight: 300;
 }
@@ -76,8 +78,10 @@ main h1, main h2 {
     box-sizing: border-box;
 }
 
-main h1, main h2, main h3, main h4, main h5, main h6 {
+main p, main h1, main h2, main h3, main h4, main h5, main h6 {
     position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 main h3 {
@@ -126,6 +130,14 @@ span.new:before {
     border-radius: 12px;
 }
 
+main h5 {
+    margin-bottom: 0px;
+}
+
+main h5 + p {
+    margin-top: 0px;
+}
+
 main small:before {
     display: block;
     font-weight: 600;
@@ -142,7 +154,7 @@ main small {
     margin-top: 30px;
     max-width: 300px;
     padding: 5px;
-    background-color: #969696;
+    background-color: #909090;
     border: 1px solid #909090;
 }
 
@@ -168,4 +180,14 @@ pre {
 
 br.clear {
     clear: both;
+}
+
+.warning {
+    background-color: #888;
+    padding: 10px;
+}
+
+.warning b {
+    display: block;
+    color: #CC0000;
 }

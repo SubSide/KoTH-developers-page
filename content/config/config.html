@@ -1,0 +1,252 @@
+<h2>config.yml explained</h2>
+<section>
+  <p>Click on a config variable to get more details :)</p>
+  <pre class="yamlfy">
+  <span class="comment"># Find all the information you need at <a href="http://dev.thomasvdbulk.nl/KoTH/">http://dev.thomasvdbulk.nl/KoTH/</a>
+
+  # To grab your own timezone go to: <a href="http://en.wikipedia.org/wiki/List_of_tz_database_time_zones">http://en.wikipedia.org/wiki/List_of_tz_database_time_zones</a></span>
+
+  <a href="#global">global</a>:
+    <a href="#global-use-cache">use-cache</a>: false
+    <a href="#global-debug">debug</a>: false
+    <a href="#global-multiplekothsatonce">multiplekothsatonce</a>: true
+    <a href="#global-schedule-show-current-day-only">schedule-show-current-day-only</a>: false
+    <a href="#global-schedule-timezone">schedule-timezone</a>: "Europe/Amsterdam"
+    <a href="#global-minuteoffset">minuteoffset</a>: <span class="number">0</span>
+    <a href="#global-startweekminuteoffset">startweekminuteoffset</a>: <span class="number">0</span>
+    <a href="#global-pre-broadcast">pre-broadcast</a>: <span class="number">0</span>
+    <a href="#global-nocap-broadcast-interval">nocap-broadcast-interval</a>: <span class="number">30</span>
+    <a href="#global-helpcommand">helpcommand</a>:
+      - "&8========> &2Koth &8<========"
+      - "&a/koth list &7Shows all available koths"
+      - "&a/koth loot &7Shows the loot for the upcoming koth"
+      - "&a/koth schedule &7Shows the schedule for koths"
+      - "&a/koth ignore &7Toggles the KoTH messages"
+
+  <a href="#loot">loot</a>:
+    <a href="#loot-default">default</a>: ""
+    <a href="#loot-randomize">randomize</a>: true
+    <a href="#loot-default-amount">default-amount</a>: <span class="number">5</span>
+    <a href="#loot-randomzie-amount">randomize-amount</a>: false
+    <a href="#loot-can-use-same-items">can-use-same-items</a>: true
+    <a href="#loot-remove-after">remove-after</a>: <span class="number">0</span>
+    <a href="#loot-drop-on-removal">drop-on-removal</a>: false
+    <a href="#loot-give-instantly">give-instantly</a>: false
+    <a href="#loot-commands">commands</a>:
+      <a href="#loot-commands-enabled">enabled</a>: false
+      <a href="#loot-commands-changeingame">changeingame</a>: false
+      <a href="#loot-commands-needop">needop</a>: true
+
+  <a href="#hooks">hooks</a>:
+    <a href="#hooks-vanishnopacket">vanishnopacket</a>: true
+    <a href="#hooks-factions">factions</a>: true
+    <a href="#hooks-kingdoms">kingdoms</a>: true
+    <a href="#hooks-featherboard">featherboard</a>:
+      <a href="#hooks-featherboard-enabled">enabled</a>: false
+      <a href="#hooks-featherboard-board">board</a>: "koth"
+      <a href="#hooks-featherboard-range">range</a>: <span class="number">100</span> <span class="comment"># -1 to disable it</span>
+      <a href="#hooks-featherboard-rangemargin">rangemargin</a>: <span class="number">5</span>
+
+  <a href="#koth">koth</a>:
+    <a href="#koth-remove-chest-at-start">remove-chest-at-start</a>: true
+    <a href="#koth-ffa-on-time-limit">ffa-on-time-limit</a>: false <span class="comment"># This will on time limit create a FreeForAll chest</span>
+    <a href="#koth-default-capturetype">default-capturetype</a>: "" <span class="comment"># set this to your desired capture type</span>
+    <a href="#koth-contest-freeze">contest-freeze</a>: false
+    <a href="#koth-capture-cooldown">capture-cooldown</a>: <span class="number">0</span>
+    <a href="#koth-channel-time">channel-time</a>: <span class="number">0</span>
+    <a href="#koth-knock-time">knock-time</a>: <span class="number">0</span>
+    <a href="#koth-minimum-players">minimum-players</a>: <span class="number">0</span>
+    <a href="#koth-map-rotation">map-rotation</a>:
+      - "map1"
+      - "map2"
+      - "map3"
+      - "map2"
+      - "etc"
+  </pre>
+  <br class="clear" />
+</section>
+<section>
+  <h3 id="global">Global</h3>
+  <section>
+    <h4 id="global-use-cache">use-cache</h4>
+    <p>This enables the caching in the plugin</p>
+    <p>Caching is used for making the KoTH continue between reloads</p>
+    <p>Also saves the maprotation index at reloads and restarts</p>
+  </section>
+  <section>
+    <h4 id="global-debug">debug</h4>
+    <p>Enables debugging in the plugin</p>
+    <p>Currently only used to show debug info about schedules when they're loaded.</p>
+  </section>
+  <section>
+    <h4 id="global-multiplekothsatonce">multiplekothsatonce</h4>
+    <p>If disabled only 1 KoTH can run at any time</p>
+    <p>This can be overwritten with the KothStartEvent</p>
+  </section>
+  <section>
+    <h4 id="global-schedule-show-current-day-only">schedule-show-current-day-only</h4>
+    <p>When a player does /koth schedule, it will only display the entries of that day.</p>
+  </section>
+  <section>
+    <h4 id="global-schedule-timezone">schedule-timezone</h4>
+    <p>The timezone of where you live at, if the timezone doesn't work, try one with the same time offsets.</p>
+    <p>Default: "Europe/Amsterdam" (pssst, that's where I live ;) )
+    <p>You can grab your timezone here: <a href="http://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Wikipedia</a></p>
+  </section>
+  <section>
+    <h4 id="global-minuteoffset">minuteoffset</h4>
+    <p>This is to adjust the time you're seeing in /koth schedule</p>
+    <p>Together with <a href="#global-startweekminuteoffset">startweekminuteoffset</a> should be used to adjust the time when schedule-timezone isn't working</p>
+  </section>
+  <section>
+    <h4 id="global-startweekminuteoffset">startweekminuteoffset</h4>
+    <p>This is to create an offset for when the start of the week begins</p>
+    <p>Together with <a href="#global-minuteoffset">minuteoffset</a> should be used to adjust the time when schedule-timezone isn't working</p>
+  </section>
+  <section>
+    <h4 id="global-pre-broadcast">pre-broadcast</h4>
+    <p>This defines how many seconds before a schedule starts a broadcast should appear</p>
+  </section>
+  <section>
+    <h4 id="global-nocap-broadcast-interval">nocap-broadcast-interval</h4>
+    <p>This defines the interval of seconds between each broadcast that nobody caps</p>
+  </section>
+  <section>
+    <h4 id="global-helpcommand">helpcommand</h4>
+    <p>The help menu that players see</p>
+  </section>
+</section>
+<section>
+  <h3 id="loot">Loot</h3>
+  <section>
+    <h4 id="loot-default">default</h4>
+    <p>the default loot that the plugin should use, for when there is none set for the koth.</p>
+  </section>
+  <section>
+    <h4 id="loot-randomize">randomize</h4>
+    <p>Randomize loot will make it so it will randomly generate the loot for you, If you don't want this (You want all the items to be given in the chest) You should put this to false.</p>
+  </section>
+  <section>
+    <h4 id="loot-default-amount">default-amount</h4>
+    <p>This is the default amount of loot that will be randomly selected from the loot chest.</p>
+  </section>
+  <section>
+    <h4 id="loot-randomize-stacksize">randomize-stacksize</h4>
+    <p>The randomize-stacksize chooses a random size of the stack you given. Say you put in 32 cobblestone, it can choose a random amount between 1 and 32.</p>
+  </section>
+  <section>
+    <h4 id="loot-can-use-same-items">can-use-same-items</h4>
+    <p>can-use-same-items is for if it can use the same item multiple times.</p>
+  </section>
+  <section>
+    <h4 id="loot-remove-after">remove-after</h4>
+    <p>remove-lootchest-after will remove the loot chest after this amount of seconds. Do note that if the server gets reloaded/restarted that this (might) not be the case!</p>
+    <p>0 to disable this</p>
+  </section>
+  <section>
+    <h4 id="loot-drop-on-removal">drop-on-removal</h4>
+    <p>drop-loot-on-removal makes it so when the loot chest gets removed, it drops the loot instead of it just disappearing. default is false</p>
+  </section>
+  <section>
+    <h4 id="loot-give-instantly">give-instantly</h4>
+    <p>give-instantly should be put to true if you want the winner to immediately get all items instead of in a chest. This can be very useful for crate keys and such. Putting this to true means that no chest will spawn!</p>
+  </section>
+  <section>
+    <h4 id="loot-commands">commands</h4>
+    <p class="warning">
+      <b>WARNING!</b>
+      <span>
+            KoTH is executing commands with NO limitations.<br />
+            For safety, at least make sure that only OP's can access this command
+        </span>
+    </p>
+    <section>
+      <h5 id="loot-commands-enabled">enabled: false</h5>
+      <p>Putting this to true allows you to link commands to KoTH</p>
+    </section>
+    <section>
+      <h5 id="loot-commands-changeingame">changeingame: false</h5>
+      <p>If you want to change the commands from ingame, set this to true. Make sure only people you can absolutely trust can edit them though!</p>
+    </section>
+    <section>
+      <h5 id="loot-commands-needop">needop: true</h5>
+      <p>Setting this to false makes it so you only need the permission to edit the commands.</p>
+    </section>
+  </section>
+</section>
+<section>
+  <h3 id="hooks">hooks</h3>
+  <section>
+    <h4 id="hooks-vanishnopacket">vanishnopacket</h4>
+    <p>Having this enabled makes it so that people that are in vanish are not able to capture the KoTH</p>
+  </section>
+  <section>
+    <h4 id="hooks-factions">factions</h4>
+    <p>If you want people to be able to capture a KoTH as a faction, enable this.</p>
+    <small>This is for both Factions AND FactionsUUID!</small>
+  </section>
+  <section>
+    <h4 id="hooks-kingdoms">kingdoms</h4>
+    <p>Same as the Factions hook, enable this if you want people to be able to capture a KoTH as a kingdom.</p>
+  </section>
+  <section>
+    <h4 id="hooks-featherboard">featherboard</h4>
+    <h5 id="hooks-featherboard-enabled">enabled: false</h5>
+    <p>Set this to true if you want to use the Featherboard hook.</p>
+    <h5 id="hooks-featherboard-board">board: "koth"</h5>
+    <p>Set this to the board you want to automatically change to.</p>
+    <small>I had some issues with Featherboard and uppercase board names, so I recommend using lowercase boards.</small>
+    <h5 id="hooks-featherboard-range">range: 100</h5>
+    <p>The range to how close the player has to be for the scoreboard to show up. Use -1 to enable it throughout the world.</p>
+    <h5 id="hooks-featherboard-rangemargin">rangemargin: 5</h5>
+    <p>The error-margin of the range.</p>
+    <p>
+      If you have the range on 100, then rangemargin 5 means you need to be:<br />
+      - 100-5=95 blocks in range for the board to show up<br />
+      - 100+5=105 blocks out of range for the board to get rid of it.
+    </p>
+  </section>
+</section>
+<section>
+  <h3 id="koth">koth</h3>
+  <section>
+    <h4 id="koth-remove-chest-at-start">remove-chest-at-start</h4>
+    <p>Set this to false if you don't want the chest to be removed at the start</p>
+  </section>
+  <section>
+    <h4 id="koth-ffa-on-time-limit">ffa-on-time-limit</h4>
+    <p>If set to true, once the time is up and no capper won, it enters a Free-for-all state where it is a race to who gets the loot first.</p>
+  </section>
+  <section>
+    <h4 id="koth-default-capturetype">default-capturetype</h4>
+    <p>Set the default config type that will be set at restart/reload</p>
+  </section>
+  <section>
+    <h4 id="koth-contest-freeze">contest-freeze</h4>
+    <p>This config option makes it so all non-related players need to be off the point before you can start capping it (So all players that are not in the faction for example)</p>
+  </section>
+  <section>
+    <h4 id="koth-capture-cooldown">capture-cooldown</h4>
+    <p>Once the player is off the point, the KoTH will enter a cooldown state, and takes X amount of seconds before it can be capped again.</p>
+    <small>previously called knock-time</small>
+  </section>
+  <section>
+    <h4 id="koth-channel-time">channel-time</h4>
+    <p>Require a player to stand on the koth for a configurable amount of seconds before actually capping it.</p>
+  </section>
+  <section>
+    <h4 id="koth-knock-time">knock-time</h4>
+    <p>This is the time how many seconds you can be off the KoTH before you actually leave it.</p>
+    <small>Previous knock-time was renamed to capture-cooldown</small>
+  </section>
+  <section>
+    <h4 id="koth-minimum-players">minimum-players</h4>
+    <p>How many players at least need to be online for a KoTH to start</p>
+  </section>
+  <section>
+    <h4 id="koth-map-rotation">map-rotation</h4>
+    <p>A list of KoTH's. You can then use "/koth start $rotation" to start from the top and move down the list.</p>
+    <p>This also works for scheduling<br />("/koth schedule create $rotation monday 5:00AM")</p>
+  </section>
+</section>
+<link href="/KoTH/css/yamlstyle.css" rel="stylesheet" type="text/css">

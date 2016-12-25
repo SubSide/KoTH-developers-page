@@ -1,0 +1,118 @@
+<h2>Schedule commands</h2>
+<p>
+    For these commands you need the permission: <b>koth.admin.schedule</b>
+</p>
+<h5>The schedule commands are:</h5>
+<ul>
+    <li><a href="#create">create</a></li>
+    <li><a href="#edit">edit</a></li>
+    <li><a href="#remove">remove</a></li>
+    <li><a href="#list">list</a></li>
+    <li><a href="#asmember">asmember</a></li>
+    <li><a href="#clear">clear</a></li>
+    <li><a href="#debug">debug</a></li>
+</ul>
+<section>
+    <h3 id="create">
+        /koth schedule create
+        <abbr title="required">&lt;koth&gt;</abbr>
+        <abbr title="required">&lt;day|(daily)&gt;</abbr>
+        <abbr title="required">&lt;time&gt;</abbr>
+        <abbr title="optional">[capturetime]</abbr>
+        <abbr title="optional">[maxruntime]</abbr>
+        <abbr title="optional">[lootamount]</abbr>
+        <abbr title="optional">[lootchest]</abbr>
+    </h3>
+    <p>Now this is a hell of a long command, and I know it. Luckily most of the arguments are not nessesary.</p>
+    <p>
+        Let me explain a bit what the default values are for every command. And what they do.<br />
+        This way I don't have to explain those down below in the edit section.
+    </p>
+    <p>If it's easier, you can choose to only use the required arguments, and just edit it later with the edit command.</p>
+    <section>
+        <h4>&lt;koth&gt;</h4>
+        <p>This one should speak for itself, which Koth should run on this time.</p>
+    </section>
+    <section>
+        <h4>&lt;day&gt;</h4>
+        <p>The day of the week (monday, tuesday, wednesday, thursday, friday, saturday, sunday)</p>
+        <p>You can use a comma to make it easier to schedule multiple at once. (Don't use a space, so "Monday,Friday")</p>
+        <p>You can also use "daily", meaning it will automatically create 7 schedules for you, each day of the week.</p>
+    </section>
+    <section>
+        <h4>&lt;time&gt;</h4>
+        <p>The time the koth should take place.</p>
+        <p>You can use a comma to make it easier to schedule multiple at once. (Don't use a space, so "14:00,10AM")</p>
+        <p>Syntax is just 4:30PM or 21:50, or 5AM, just don't use spaces and you should be good. AM just doesn't do anything really, and PM just adds 12 to it (Except for 12, because you americans are that weird to not just add 12 to everything (jk jk))</p>
+    </section>
+    <section>
+        <h4>[capturetime]</h4>
+        <p>The time a player has to stand on the koth to capture it.</p>
+        <p><b>Default:</b> 15 </p>
+    </section>
+    <section>
+        <h4>[maxruntime]</h4>
+        <p>
+            The maximum amount of minutes a koth can run. If it is being capped at the moment this timer runs out, it will wait till the player has capped it, or when he gets knocked off.
+            If he gets knocked off when the timer already ran out, it will immediately end it.
+        </p>
+        <p><b>Default:</b> -1 (disabled)</p>
+    </section>
+    <section>
+        <h4>[lootamount]</h4
+        <p>The amount of loot that should spawn in the chest.</p>
+        <p><b>Default:</b> (The amount set in the config)</p>
+    </section>
+    <section>
+        <h4>[loot]</h4>
+        <p>Which lootchest should be used for this koth.</p>
+        <p><b>Default:</b> (inherited by the KoTH itself)</p>
+    </section>
+</section>
+<section>
+    <h3 id="edit">/koth schedule edit</h3>
+    <p>
+        All schedule edit command require an ID,<br/>
+        the ID you can grab from <a href="#list">/koth schedule list</a>
+    </p>
+    <p>
+        I'm going to mention the commands here, I'm not going in-depth though.<br />
+        All the meanings for each variable you can get above from: <a href="#create">Here</a>
+    </p>
+    <ul>
+        <li>/koth schedule edit &lt;ID&gt; koth &lt;kothname&gt;</li>
+        <li>/koth schedule edit &lt;ID&gt; day &lt;day&gt;</li>
+        <li>/koth schedule edit &lt;ID&gt; time &lt;time&gt;</li>
+        <li>/koth schedule edit &lt;ID&gt; capturetime &lt;capturetime&gt;</li>
+        <li>/koth schedule edit &lt;ID&gt; maxruntime &lt;maxruntime&gt;</li>
+        <li>/koth schedule edit &lt;ID&gt; lootamount &lt;lootamount&gt;</li>
+        <li>/koth schedule edit &lt;ID&gt; loot &lt;loot&gt;</li>
+    </ul>
+</section>
+<section>
+    <h3 id="remove">
+        /koth schedule remove
+        <abbr title="required">&lt;id&gt;</abbr>
+    </h3>
+    <p> Remove a certain schedule with the given <a href="#list">#ID</a>.</p>
+    <small>
+        Please keep in mind, that the ID may differ every time you remove a schedule. So don't just blindly note all the ID's and start deleting them. You could cause a lot of problems!
+    </small>
+</section>
+<section>
+    <h3 id="list">/koth schedule list</h3>
+    <p>Shows a list of all the created schedules with their IDs.</p>
+    <small> Please keep in mind, that the ID may differ every time you add/remove a schedule.</small>
+</section>
+<section>
+    <h3 id="asmember">/koth schedule asmember</h3>
+    <p>Members see the /koth schedule differently than an Administrator, members will see a nice marked up list. Now to make sure you know what members actually see you can use this command.</p>
+</section>
+<section>
+    <h3 id="clear">/koth schedule clear</h3>
+    <p>Clears the whole schedule list</p>
+</section>
+<section>
+    <h3 id="debug">/koth schedule debug</h3>
+    <p>A small debug command for testing purposes, <a href="/KoTH/commands/basic#info">/koth info schedule</a> is way more recommended!</p>
+</section>

@@ -44,6 +44,7 @@ if(!preg_match("/^([a-z0-9\/]+)/i", $page)){
 				<a href="/KoTH/config/koths">Koths.json explained</a>
 				<a href="/KoTH/config/loot">Loot.json explained</a>
 				<a href="/KoTH/config/schedule">Schedule.json explained</a>
+				<a href="/KoTH/config/cache">cache.json explained</a>
 				<a href="/KoTH/config/lang">Lang.json</a>
 			</div>
 		</div>

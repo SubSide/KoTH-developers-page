@@ -1,0 +1,66 @@
+<h2>koths.json explained</h2>
+<section>
+    <small>Copying from here does not work! As the comma's behind will not be copied with it.</small>
+    <div class="expl-surround">
+        <pre>
+            {
+              "runningKoths": [
+                {
+                  "timeRunning": 8,
+                  "lootChest": "lootchest",
+                  "capperTime": 7,
+                  "capperEntity": "2cc2b...",
+                  "captureTime": 900,
+                  "kothType": "classic",
+                  "maxRunTime": -60,
+                  "koth": "pyramid",
+                  "lootAmount": 5,
+                  "captureCooldown": 0,
+                  "capperType": "faction"
+                },
+                {
+                  "timeRunning": 8,
+                  "loot..": "loot...",
+                  "...": "..."
+                }
+              ],
+              "mapRotation": {
+                "index": 44
+              }
+            }
+        </pre>
+        <div class="explanation">
+            <br />
+            The list of all currently running KoTH's.<br />
+            <br />
+            How long the KoTH is running in seconds.<br />
+            The lootchest linked to this KoTH<br />
+            How long the capper has been on the point<br />
+            The UID of the capper<br />
+            How long a player needs to cap it.<br />
+            The gametype.<br />
+            maximum run time. < 0 is unlimited<br />
+            The KoTH that is currently running<br />
+            The amount of loot that should spawn<br />
+            the cooldown of this KoTH<br />
+            The type of capture entity.<br />
+            <br />
+            A new running KoTH<br />
+            How long the KoTH is running in seconds.<br />
+            The lootchest linked to this KoTH<br />
+            etc...<br />
+            <br />
+            <br />
+            The map rotation object<br />
+            The index of the map rotation<br />
+            <br />
+            <br />
+        </div>
+        <br class="clear"/></div>
+</section>
+<link rel="stylesheet" href="/KoTH/css/jjsonviewer.css">
+<script type="text/javascript" src="/KoTH/js/jquery.min.js"></script>
+<script type="text/javascript" src="/KoTH/js/jjsonviewer.js"></script>
+<script type="text/javascript">  $("pre").each(function () {
+    $(this).jJsonViewer($(this).html().replace(/&amp;/gi, "&"), {expanded: true});
+});</script>

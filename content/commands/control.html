@@ -1,0 +1,114 @@
+<header>
+    <h2>Koth editor commands</h2>
+    <p>For these commands you need the permission: <b>koth.admin.edit</b></p>
+    <h5>The koth editor commands are:</h5>
+    <ul>
+        <li><a href="#start">start</a></li>
+        <li><a href="#end">end</a></li>
+        <li><a href="#stop">stop</a></li>
+        <li><a href="#mode">mode</a></li>
+        <li><a href="#change">change</a></li>
+    </ul>
+</header>
+<section>
+    <h3 id="start">
+        /koth start
+        <abbr title="required">&lt;koth&gt;</abbr>
+        <abbr title="optional">[captureTime]</abbr>
+        <abbr title="optional">[maxRunTime]</abbr>
+        <abbr title="optional">[lootAmount]</abbr>
+        <abbr title="optional">[entityType]</abbr>
+        <span>Permission: koth.control.start</span>
+        <span>Default: Operators</span>
+    </h3>
+    <p>Starts a certain koth, you can run multiple koths at once! Just not the same koth multiple times.</p>
+    <section>
+        <h4>Capturetime</h4>
+        <p>The amount of time a player has to stand on the KoTH to capture it</p>
+        <p><b>Default:</b> 15</p>
+    </section>
+    <section>
+        <h4>maxRunTime</h4>
+        <p>Maximum amount of time the KoTH can run</p>
+        <p><b>Default:</b> -1 (unlimited)</p>
+    </section>
+    <section>
+        <h4>lootAmount</h4>
+        <p>How much loot should spawn</p>
+        <p><b>Default:</b> (grabbed from the config)</p>
+    </section>
+    <section>
+        <h4>entityType</h4>
+        <p>
+            With what entity type you want to start the koth<br />
+            (For example: Player or Faction)
+        </p>
+        <p><b>Default:</b> (currently selected entity with <a href="#mode">/koth mode entitytype</a></p>
+    </section>
+</section>
+<section>
+    <h3 id="end">
+        /koth end
+        <abbr title="optional">[koth]</abbr>
+        <span>Permission: koth.control.end</span>
+        <span>Default: Operators</span>
+    </h3>
+    <p>
+        This will gracefully end all koths (or a specific koth with the argument). Gracefully means, that the person standing on it at that moment will instantly win it.
+        If there is no person standing on it, it will be capped and won by the first person that will stand on it.
+    </p>
+</section>
+<section>
+    <h3 id="stop">
+        /koth stop
+        <abbr title="optional">[koth]</abbr>
+        <span>Permission: koth.control.stop</span>
+        <span>Default: Operators</span>
+    </h3>
+    <p>
+        This will forcefully stop all koths (or a specific koth with the argument). This means that it will just stop it like it never happened, no winners.
+        Very helpful for testing purposes!
+    </p>
+</section>
+<section>
+    <h3 id="mode">
+        /koth mode
+        <abbr title="optional">[mode]</abbr>
+        <span>Permission: koth.control.mode</span>
+        <span>Default: Operators</span>
+    </h3>
+    <section>
+        <h4>/koth mode capturetype <abbr title="required">&lt;capturetype&gt;</abbr></h4>
+        <p>Use this command to change the capturetype.</p>
+        <p>
+            Current supported capturetypes:
+        </p>
+        <ul>
+            <li>player</li>
+            <li>factions (if Factions is enabled)</li>
+            <li>factionsuuid (if FactionsUUID is enabled)</li>
+            <li>kingdoms (if Kingdoms is enabled)</li>
+            <li><i>factions (if the FactionsOne extension is installed)</i></li>
+        </ul>
+    </section>
+    <section>
+        <h4>/koth mode gamemode <abbr title="required">&lt;gamemode&gt;</abbr></h4>
+        <p>Current supported gamemodes:</p>
+        <ul>
+            <li>classic</li>
+            <li>conquest (Only if a group-based entity is enabled)</li>
+        </ul>
+    </section>
+
+    <p>Both capturetypes and gamemodes can be implemented by developers if they so desire.</p>
+</section>
+<section>
+    <h3 id="change">
+        /koth change
+        <span>Permission: koth.admin.change</span>
+        <span>Default: Operators</span>
+    </h3>
+    <p>
+        This command is a work in progress, more info when it's done.
+    </p>
+</section>

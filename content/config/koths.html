@@ -1,0 +1,41 @@
+<h2>koths.json explained</h2>
+<section>
+    <small>Copying from here does not work! As the comma's behind will not be copied with it.</small>
+    <div class="expl-surround">
+        <pre>[  {    "lastWinner": "SubSideNL",    "name": "pyramid",    "loot": {      "name": "lootchest",      "position": {        "world": "world",        "x": -152,        "y": 66,        "z": -307      }    },    "areas": [      {        "loc1": {          "world": "world",          "x": -155,          "y": 65,          "z": -307        },        "loc2": {          "world": "world",          "x": -154,          "y": 68,          "z": -302        },        "name": "leftside"      },      {        "loc1": {          "world": "world",          "x": -156,          "y": 65,          "z": -306        },        "loc2": {          "world": "world",          "x": -153,          "y": 68,          "z": -303        },        "name": "rightside"      }    ]  }]</pre>
+        <div class="explanation">
+            <br/><br/>
+            The last person who won the KoTH<br/>
+            Name of the KoTH
+            <br/><br/>
+            Name of the
+            loot chest<br/>
+            Loot position<br/>
+            <br/><br/><br/>
+            <br/><br/><br/>
+            List of areas<br/>
+            <br/>
+            Lowest point of the area<br/>
+            <br/><br/><br/>
+            <br/><br/>
+            Highest point of the area<br/>
+            <br/><br/><br/>
+            <br/><br/>
+            Name of the area<br/>
+            <br/><br/>
+            Lowest point of the area<br/>
+            <br/><br/><br/>
+            <br/><br/>
+            Highest point of the area<br/>
+            <br/><br/><br/>
+            <br/><br/>Name of the area<br/>
+            <br/><br/><br/><br/>
+        </div>
+        <br class="clear"/></div>
+</section>
+<link rel="stylesheet" href="/KoTH/css/jjsonviewer.css">
+<script type="text/javascript" src="/KoTH/js/jquery.min.js"></script>
+<script type="text/javascript" src="/KoTH/js/jjsonviewer.js"></script>
+<script type="text/javascript">  $("pre").each(function () {
+    $(this).jJsonViewer($(this).html().replace(/&amp;/gi, "&"), {expanded: true});
+});</script>

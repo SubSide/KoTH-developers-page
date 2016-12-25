@@ -1,0 +1,80 @@
+<header>
+    <h2>Koth editor commands</h2>
+    <p>For these commands you need the permission: <b>koth.admin.edit</b></p>
+    <h5>The koth editor commands are:</h5>
+    <ul>
+        <li><a href="#area">area</a></li>
+        <li><a href="#loot">loot</a></li>
+        <li><a href="#rename">rename</a></li>
+    </ul>
+</header>
+<section>
+    <h3 id="area">
+        /koth edit
+        <abbr title="required">&lt;koth&gt;</abbr>
+        area
+    </h3>
+    <section>
+        <p>
+            With the area command you can define and remove new areas.	Meaning you can have multiple areas a player could stand in to capture.
+        </p>
+        <p>
+            A nice way to see it is to imagine two towers. Now the player can go in one of the towers to cap it.	The other players have to guess in which tower he is to actually get him off the capture zone.
+            Now imagine 20 capture zones! You could make like a maze! :P
+        </p>
+        <p>
+            There is not really a limit on how many areas you can select, the servers performance is your limit!
+        </p>
+
+        <small>
+            When a koth is running, you could edit the areas, and it would take immediate effect!
+        </small>
+    </section>
+    <section>
+        <h4>/koth edit <abbr title="required">&lt;koth&gt;</abbr> area list</h4>
+        <p>Shows a list with all the defined areas.</p>
+    </section>
+    <section>
+        <h4>/koth edit <abbr title="required">&lt;koth&gt;</abbr> area create <abbr title="required">&lt;area&gt;</abbr></h4>
+        <p>
+            This command creates new capture zones with the given name for players to stand in.
+            Just like with creating the koth in the first place, you must have an area selected with worldedit.
+        </p>
+    </section>
+    <section>
+        <h4>/koth edit <abbr title="required">&lt;koth&gt;</abbr> area edit <abbr title="required">&lt;area&gt;</abbr></h4>
+        <p>This command will overwrite previous defined areas.</p>
+    </section>
+    <section>
+        <h4>/koth edit <abbr title="required">&lt;koth&gt;</abbr> area remove <abbr title="required">&lt;area&gt;</abbr></h4>
+        <p>Removes a previous defined area.</p>
+    </section>
+</section>
+<section>
+    <h3 id="loot">
+        /koth edit
+        <abbr title="required">&lt;koth&gt;</abbr>
+        loot
+    </h3>
+    <section>
+        <h4>/koth edit <abbr title="required">&lt;koth&gt;</abbr> loot setpos</h4>
+        <p>Sets the position of where the loot chest should spawn.</p>
+    </section>
+    <section>
+        <h4>/koth edit <abbr title="required">&lt;koth&gt;</abbr> loot link <abbr title="required">&lt;loot&gt;</abbr></h4>
+        <p>Links a certain loot chest to the koth.</p>
+        <p>If no loot chest is set, it will try to grab the default chest from the config. If no chest has been set, no loot will spawn.</p>
+    </section>
+</section>
+<section>
+    <h3 id="rename">
+        /koth edit
+        <abbr title="required">&lt;koth&gt;</abbr>
+        rename
+        <abbr title="required">&lt;name&gt;</abbr>
+    </h3>
+    <p>Renames the koth area.</p>
+    <small>
+        Make sure you update your schedules!
+    </small>
+</section>

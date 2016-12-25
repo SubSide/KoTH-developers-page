@@ -1,0 +1,245 @@
+<h2>Default lang.json</h2>
+<section>
+<ul>
+  <li><a href="#multiplelines">Using multiple lines</a></li>
+  <li><a href="#validate">Validate it!</a></li>
+</ul>
+<small>Copying from here does not work! as the comma's behind will not be copied with it.</small>
+<pre>
+{
+  "AREA": {
+    "ERROR": {
+      "NOTEXIST": "&aThe area %area% doesn't exist!",
+      "ALREADYEXISTS": "&aThe area %area% already exists!"
+    }
+  },
+  "COMMAND": {
+    "RELOAD": {
+      "RELOAD": "&aKoth &2>> &aReload complete"
+    },
+    "LISTS": {
+      "EDITOR_AREA_TITLE": "&8========> &2KoTH area list &8<========",
+      "LOOT_CMD_TITLE": "&8========> &2Loot command list &8<========",
+      "LOOT_TITLE": "&8========> &2Available Loot chests &8<========",
+      "EDITOR_AREA_ENTRY": "&a%area% &7- (%x%, %z%)",
+      "LIST_ENTRY": "&7- &a%koth%",
+      "LOOT_ENTRY": "&7- &a%loot%",
+      "LIST_TITLE": "&8========> &2Available KoTHs &8<========",
+      "LOOT_CMD_ENTRY": "&a(#%id%) &7- &a%command%"
+    },
+    "MODE": {
+      "CHANGED": "&aYou succesfully changed the gamemode to: %entry%",
+      "NOT_EXIST": "&aNo such gamemode exists!",
+      "LIST_ENTRY": "&7- &7%entry%",
+      "LIST_TITLE": "&8========> &2Available Gamemodes &8<========"
+    },
+    "LOOT": {
+      "RENAME": "&aLoot succesfully renamed!",
+      "CMD_CONFIG_NOT_ENABLED": "&cNote: commands are disabled in the config!",
+      "CREATE": "&aLoot succesfully created!",
+      "CMD_REMOVED": "&aLoot command succesfully removed!",
+      "OPENING": "&aOpening %loot%.",
+      "REMOVE": "&aSuccesfully removed the loot!",
+      "CMD_NOTANUMBER": "&aThis is not a valid ID!",
+      "CMD_INGAME_DISABLED": "&aCommands can't be managed from ingame! Must be through config!",
+      "CHEST_TITLE": "&1%loot%s &8&lloot",
+      "CMD_CREATED": "&aLoot command succesfully added!",
+      "CMD_OPONLY": "&aYou must be an OP to manage commands!"
+    },
+    "IGNORE": {
+      "STOP": "&aChat messages from &2KoTH &aare now shown.",
+      "START": "&aChat messages from &2KoTH &aare now ignored."
+    },
+    "INFO": {
+      "TITLE_SCHEDULE": "&8========> &2#%id% schedule info &8<========",
+      "COLORS": [
+        "&2",
+        "&a"
+      ],
+      "TITLE_KOTH": "&8========> &2%koth% koth info &8<========",
+      "TITLE_LOOT": "&8========> &2%loot% loot info &8<========"
+    },
+    "EDITOR": {
+      "NAME_CHANGE": "&aChanged the name of the koth!",
+      "LOOT_POSITION_SET": "&aLoot position succesfully set!",
+      "AREA_ADDED": "&aYou succesfully added the area!",
+      "AREA_DELETED": "&aYou succesfully deleted the area!",
+      "LOOT_SETNOBLOCK": "&aYou need to look at the block where the chest should spawn!",
+      "AREA_EDITED": "&aYou succesfully edited the area!",
+      "LOOT_LINK": "&aChanged the link of the loot!"
+    },
+    "ENTITY": {
+      "CHANGED": "&aYou succesfully changed the gamemode to: %entry%",
+      "NOT_EXIST": "&aNo such capture entity exists!",
+      "LIST_ENTRY": "&7- &7%entry%",
+      "LIST_TITLE": "&8========> &2Available Capture Entites &8<========"
+    },
+    "TERMINATE": {
+      "ALL_KOTHS": "&aYou have terminated all koths!",
+      "SPECIFIC_KOTH": "&aYou have terminated %koth%!"
+    },
+    "NEXT": {
+      "MESSAGE": "&aThe next KoTH \"%koth%\" will start in: %ttn%",
+      "NO_NEXT_FOUND": "&aThere are no scheduled KoTH's!"
+    },
+    "GLOBAL": {
+      "NO_PERMISSION": "&cYou have no permission to use this command!",
+      "PREFIX": "&2[KOTH] &a",
+      "USAGE": "&2Usage: &a",
+      "HELP_INFO": "&a%command% &7%command_info%",
+      "ONLYFROMINGAME": "&aThis command can only be executed from ingame!",
+      "WESELECT": "&aYou need to select an koth with worldedit!",
+      "HELP_TITLE": "&8========> &2%title% &8<========"
+    },
+    "TELEPORT": {
+      "TELEPORTING_AREA": "&aTeleporting to %koth%, area %area%!",
+      "TELEPORTING": "&aTeleporting to %koth%!",
+      "NOAREAS": "&aThis koth doesn't have any areas!"
+    },
+    "CHANGE": {
+      "POINTS_SET": "&aPoints of the faction %entry% succesfully set!",
+      "POINTS_NOTANUMBER": "&aThis is not a number!",
+      "POINTS_FACTION_NOT_FOUND": "&aCan't find a faction with this name!"
+    },
+    "KOTH": {
+      "CREATED": "&aYou successfully created the koth %koth%!",
+      "ALREADYEXISTS": "&aThe koth %koth% already exists!",
+      "REMOVED": "&aYou've successfully removed the koth %koth%!"
+    },
+    "SCHEDULE": {
+      "EDITOR_CHANGE_DAY": "&aYou changed the day for #%id%!",
+      "NOVALIDDAY": "&aThis is not a valid day! (monday, tuesday etc)",
+      "ADMIN_EMPTY": "&aThe schedule list is currently empty!",
+      "ADMIN_LIST_ENTRY": "&a(#%id%) %koth% at %time% with a capture time of %ct%",
+      "CLEARED": "&aThe schedule list has been cleared!",
+      "REMOVENOID": "&aThe ID must be a number! (Shown in /koth schedule list)",
+      "CREATED": "&aYou have created a schedule for %koth% on %day% at %time% (Capture time: %ct% minutes)!",
+      "LIST_BOTTOM": [
+        " ",
+        "Does this work? :3"
+      ],
+      "EDITOR_CHANGE_LOOT": "&aYou changed the loot for #%id%!",
+      "EDITOR_CHANGE_MAXRUNTIME": "&aYou changed the max runtime for #%id%!",
+      "LIST_ENTRY": "&a%koth% at %time% in %ttn%",
+      "ADMIN_LIST_DAY": "&8========> &2%day% &8<========",
+      "EDITOR_CHANGE_CAPTURETIME": "&aYou changed the runtime for #%id%!",
+      "EMPTY": "&aThe server owner did not schedule any Koths!",
+      "REMOVED": "&aThe schedule for %koth% is removed.",
+      "EDITOR_CHANGE_NOVALIDDAY": "&aThis is not a valid day! (monday, tuesday etc)",
+      "ADMIN_LIST_CURRENTDATETIME": "&aCurrent date: %date%",
+      "EDITOR_CHANGE_KOTH": "&aYou changed the koth for #%id% to %koth",
+      "NOTEXIST": "&aThis schedule doesn't exist! (Check /koth schedule list for numbers)",
+      "EDITOR_CHANGE_LOOTAMOUNT": "&aYou changed the loot amount for #%id%!",
+      "NOTANUMBER": "&aThis is not a valid number!",
+      "LIST_DAY": "&8========> &2%day% &8<========",
+      "LIST_CURRENTDATETIME": "&aCurrent date: %date%",
+      "EDITOR_CHANGE_ENTITYTYPE": "&aYou changed the entitytype for #%id%!",
+      "EDITOR_CHANGE_TIME": "&aYou changed the time for #%id%!"
+    }
+  },
+  "KOTH": {
+    "ERROR": {
+      "ALREADYRUNNING": "&aThe koth %koth% is already running!",
+      "NOTEXIST": "&aThe koth %koth% doesn't exist!",
+      "ANOTHERALREADYRUNNING": "&aThere is already a KoTH running!",
+      "ALREADYEXISTS": "&aThe koth %koth% already exists!",
+      "NONE_RUNNING": "&aThe currently no koth running!",
+      "NO_COMPATIBLE_CAPPER": "This is not a compatible player!",
+      "NOT_COMPATIBLE": "&aThe current koth is not compatible!"
+    },
+    "PLAYING": {
+      "MINIMUM_PLAYERS_NOT_MET": "&aThe minimum required of players is not met, KoTH will not continue.",
+      "STARTING": "&aThe koth %koth% has begun!",
+      "CAPTIME": "&a%capper% is capping the koth! %ml%:%sl% left!",
+      "LEFT": "&a%capper% left the koth!",
+      "LEFT_CAPPER": "&aYou left the koth!",
+      "PLAYER_JOINING": "&aThere is currently a KoTH running! How about a fight!?",
+      "CAP_START": "&a%capper% has started to cap %koth%!",
+      "LOOT_CHEST": "&1&l%koth%s &8&lloot",
+      "CAP_CHANNELING": "&aChanneling started for %capper%, stay on the point for just %time% seconds!",
+      "CAP_CHANNELING_CAPPER": "&aYou started channeling the KoTH, just stay on the point for %time% seconds!",
+      "NOT_CAPPING": "&aThere is nobody capping the KoTH right now! (X: %x%, Z:%z%)",
+      "CAP_START_CAPPER": "&aYou have started capping %koth%!",
+      "WON_DROPPING_ITEMS": "&aCouldn't place all items in your inventory! It's on the floor!",
+      "TIME_UP": "&aAfter %mt% minute noone capped the KoTH! Event is over!",
+      "WON": "&aThe koth %koth% ended! %capper% won!",
+      "WON_CAPPER": "&aThe koth %koth% ended! You won!",
+      "PRE_BROADCAST": "&aThe koth %koth% will start in 30 minutes!",
+      "CAPTIME_CAPPER": "&aYou are capping the koth! %ml%:%sl% left!"
+    }
+  },
+  "HOOKS": {
+    "PLACEHOLDERAPI": {
+      "TIMETILL": "%hh%:%mm%:%ss%",
+      "NOONECAPPING": "No One"
+    }
+  },
+  "LOOT": {
+    "ERROR": {
+      "NOTEXIST": "&aThe loot %loot% doesn't exist!",
+      "ALREADYEXISTS": "&aThe loot %loot% already exists!"
+    }
+  }
+}
+</pre>
+<br class="clear" />
+
+<h3 id="multiplelines">Using multiple lines</h3>
+<p>With the exception of a couple, it is possible to make the messages in the lang.json use multiple lines.<br />
+You can make a lot of cool messages like the one below!
+<br /><br />
+<img src="/KoTH/images/multiplelines.png" alt="Multiple lines" />
+<br /><br />
+Anyway, lets get right to it.<br />
+<h4>Multiple lines</h4>
+To make a message multiple lines, you need to make an array out of it.<br />
+<pre>
+{
+  "PLAYING": {
+    "STARTING": "&aThe koth %koth% has begun!",
+    "CAPTIME": "&a%player% is capping the koth! %minutes_left%:%seconds_left% left!",
+    "LEFT": "&a%player% left the koth!",
+    "....": "&a...."
+  }
+}
+</pre>
+<br class="clear" />
+You surround a json array with [square brackets],<br />
+then you separate every message by a comma,
+<br />
+<pre>
+{
+"PLAYING": {
+      "STARTING": [
+        "&a&#9608;&#9608;&#9608;&#9608;&#9608;",
+        "&a&#9608;&0&#9608;&a&#9608;&0&#9608;&a&#9608;",
+        "&a&#9608;&#9608;&0&#9608;&a&#9608;&#9608; The koth %koth% has begun!",
+        "&a&#9608;&#9608;&0&#9608;&a&#9608;&#9608;",
+        "&a&#9608;&#9608;&#9608;&#9608;&#9608;"
+      ],
+      "CAPTIME": "&a%player% is capping the koth! %minutes_left%:%seconds_left% left!",
+      "LEFT": [
+        "&aOh no!",
+        "&a%player% left the Koth!"
+      ],
+      "....": "&a...." 
+    }
+  }
+</pre>
+<br class="clear" />
+<h4 id="validate">Validate it!</h4>
+JSON can be pretty picky if the syntax isn't correctly.<br />
+If the syntax isn't correct it cannot read the file and it resets the file.<br />
+So make sure you check if it is valid!<br />
+<br />
+Json parser: <a href="http://json.parser.online.fr/">http://json.parser.online.fr/</a>
+</p>
+</section>
+<link rel="stylesheet" href="/KoTH/css/jjsonviewer.css">
+<script type="text/javascript" src="/KoTH/js/jquery.min.js"></script>
+<script type="text/javascript" src="/KoTH/js/jjsonviewer.js"></script>
+<script type="text/javascript">
+  $("pre").each(function(){
+    $(this).jJsonViewer($(this).html().replace(/&amp;/gi, "&"),{expanded: true});
+  });
+</script>

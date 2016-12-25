@@ -1,0 +1,15 @@
+.yamlfy span {
+	color: #000000;
+}
+
+.yamlfy span.comment {
+	color: #00AA00;
+}
+
+.yamlfy span.number {
+	color: #FF7700;
+}
+
+.yamlfy .comment a {
+	color: #30aa79;
+}

@@ -1,0 +1,147 @@
+<header>
+    <h2>Koth basic commands</h2>
+    <p>For these commands you need the permission: <b>koth.admin.edit</b></p>
+    <h5>The koth editor commands are:</h5>
+    <ul>
+        <li><a href="#asmember">asmember</a></li>
+        <li><a href="#list">list</a></li>
+        <li><a href="#version">version</a></li>
+        <li><a href="#reload">reload</a></li>
+        <li><a href="#tp">tp</a></li>
+        <li><a href="#info">info</a></li>
+        <li><a href="#ignore">ignore</a></li>
+        <li><a href="#next">next</a></li>
+    </ul>
+</header>
+<section>
+    <h3 id="asmember">
+        /koth asmember
+        <span>Permission: koth.admin.help</span>
+        <span>Default: Operators</span>
+    </h3>
+    <p>
+        Shows the help menu as a normal player would see it.
+    </p>
+</section>
+<section>
+    <h3 id="list">
+        /koth list
+        <span>Permission: koth.list</span>
+        <span>Default: Operators</span>
+    </h3>
+    <p>
+        Shows a list of all available KoTH's
+    </p>
+</section>
+<section>
+    <h3 id="version">
+        /koth version
+        <span>Permission: koth.version</span>
+        <span>Default: True</span>
+    </h3>
+    <p>
+        Shows the version number, author and a link to the thread
+    </p>
+    <small>
+        You can disable this feature, but for the people that don't, much appreciated :)
+    </small>
+</section>
+<section>
+    <h3 id="reload">
+        /koth reload
+        <span>Permission: koth.admin.reload</span>
+        <span>Default: Operators</span>
+    </h3>
+    <p>
+        This command reloads the entire plugin. All configs, json files, everything. Pretty helpful when you make minor changes.
+    </p>
+    <small>
+        This does stop all running KoTHs!
+    </small>
+</section>
+<section>
+    <h3 id="tp">
+        /koth tp
+        <abbr title="required">&lt;koth&gt;</abbr>
+        <abbr title="optional">[area]</abbr>
+        <span>Permission: koth.admin.tp</span>
+        <span>Default: Operators</span>
+    </h3>
+    <p>
+        With the tp command you can easily teleport to the koths. Very helpful when you don't want to remember the coords, or just forgot where it was! This teleports you to the middle of the first defined area.	You can also teleport to a specific area by using the optional [area] argument.
+    </p>
+    <small>
+        To make sure you don't teleport in the ground, it will teleport you to the highest block.
+        Keep that in mind if it's underground!
+    </small>
+</section>
+<section>
+    <h3 id="info">
+        /koth info
+        <span>Permission: koth.admin.info</span>
+        <span>Default: Operators</span>
+    </h3>
+    <p>
+        The info command is quite big, so I'm going to split it up in 3 sections,
+        but I just want to tell you that it's currently my most favorite command.
+        The info command will give you all the relevant information you need.
+    </p>
+    <section>
+        <h4>/koth info koth <abbr title="required">&lt;koth&gt;</abbr></h4>
+        <p>The koth info command will show you the following information:</p>
+        <ul>
+            <li>Name</li>
+            <li>Last winner</li>
+            <li>Location</li>
+            <li>Linked loot</li>
+            <li>Loot position</li>
+            <li>Areas</li>
+            <li>Schedules linked</li>
+        </ul>
+    </section>
+    <section>
+        <h4>/koth info loot <abbr title="required">&lt;loot&gt;</abbr></h4>
+        <p>The loot info command will show you the following information:</p>
+        <ul>
+            <li>Name</li>
+            <li>Koths linked</li>
+            <li>Schedules linked</li>
+        </ul>
+    </section>
+    <section>
+        <h4>/koth info schedule <abbr title="required">&lt;schedule&gt;</abbr></h4>
+        <p>The schedule info command will show you the following information:</p>
+        <ul>
+            <li>ID</li>
+            <li>Day</li>
+            <li>Time</li>
+            <li>KoTH</li>
+            <li>Loot</li>
+            <li>Capture type</li>
+            <li>Capture time</li>
+            <li>Max runtime</li>
+            <li>Time before it starts</li>
+        </ul>
+    </section>
+</section>
+<section>
+    <h3 id="ignore">
+        /koth ignore
+        <span>Permission: koth.ignore</span>
+        <span>Default: True</span>
+    </h3>
+    <p>
+        Ignores the global messages of the KoTH, this is for the players that might find the messages a bit spammy.
+    </p>
+</section>
+<section>
+    <h3 id="next">
+        /koth next
+        <span>Permission: koth.next</span>
+        <span>Default: True</span>
+        <span class="new"></span>
+    </h3>
+    <p>
+        Shows which KoTH is scheduled next.
+    </p>
+</section>
